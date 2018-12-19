@@ -52,7 +52,8 @@ export class MapComponent {
   };
 
   layersControlOptions = {
-    position: 'bottomright'
+    position: 'bottomright',
+    collapsed: false
   }
 
   onMapReady(map: Map) {
