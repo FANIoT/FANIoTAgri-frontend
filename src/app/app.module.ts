@@ -4,11 +4,13 @@ import { LeafletModule } from '@asymmetrik/ngx-leaflet';
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
+import { SensorsComponent } from './sensors/sensors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    SensorsComponent
   ],
   imports: [
     BrowserModule,
