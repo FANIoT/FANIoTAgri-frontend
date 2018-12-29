@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { control, Map, icon, latLng, marker, polyline, tileLayer, Layer } from 'leaflet';
+import { control, Map, icon, latLng, marker, polyline, polygon, tileLayer, Layer } from 'leaflet';
 import { GestureHandling } from 'leaflet-gesture-handling';
 
 @Component({
@@ -37,6 +37,9 @@ export class MapComponent {
       'Street Maps': this.streetMaps,
       'Wikimedia Maps': this.wMaps,
       'Satellite Maps': this.satMaps
+    },
+    overlays: {
+      'Farms': polygon([[36.720169444444444,57.20257777777778], [36.731122222222226,57.204997222222225], [36.73677222222222,57.180636111111106], [36.726125,57.17706944444444]]),
     }
   };
 
