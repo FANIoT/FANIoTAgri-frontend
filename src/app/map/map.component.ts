@@ -51,14 +51,12 @@ export class MapComponent {
           iconUrl: 'assets/img/drop-pins/office.png',
         })
       }),
-      /*
       'Weather Station': marker([ 36.6388777778, 57.4046222222 ], {
         icon: icon({
           iconSize: [25, 30],
-          iconUrl: '',
+          iconUrl: 'assets/img/drop-pins/weather.png',
         })
       }),
-      */
       'Communication Station': marker([ 36.646472, 57.413339 ], {
         icon: icon({
           iconSize: [25, 30],
