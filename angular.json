@@ -23,11 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "./node_modules/leaflet/dist/leaflet.css",
-              "./node_modules/leaflet-gesture-handling/dist/leaflet-gesture-handling.css",
-              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "./src/assets/plugins/font-awesome/5.0/css/fontawesome-all.min.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
