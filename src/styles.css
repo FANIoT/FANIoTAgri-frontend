@@ -1,3 +1,8 @@
+@import "~leaflet/dist/leaflet.css";
+@import "~leaflet-gesture-handling/dist/leaflet-gesture-handling.css";
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+
 body {
   background: #fff;
   font-family: 'Open Sans', "Helvetica Neue",Helvetica,Arial,sans-serif;
