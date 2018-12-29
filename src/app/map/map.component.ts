@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import {control, Map, icon, latLng, marker, polyline, tileLayer, Layer} from 'leaflet';
+import { control, Map, icon, latLng, marker, polyline, tileLayer, Layer } from 'leaflet';
 import { GestureHandling } from 'leaflet-gesture-handling';
 
 @Component({
@@ -44,7 +44,7 @@ export class MapComponent {
   options = {
     layers: [ this.satelliteStreet ],
     zoom: 14,
-    center: latLng([ 36.738551, 57.175413 ]),
+    center: latLng([ 36.738551, 57.175413 ]), // center of the Joveyn provice
     zoomControl: false,
     attributionControl: false,
     gestureHandling: true,
@@ -56,6 +56,7 @@ export class MapComponent {
     collapsed: false
   }
 
+  // onMapReady is called with map component reference when it is ready.
   onMapReady(map: Map) {
     map.addControl(control.zoom({ position: 'bottomleft' }));
     Map.addInitHook('addHandler', 'gestureHandling', GestureHandling);
