@@ -12,6 +12,7 @@ import { MapComponent } from './map/map.component';
 import { SensorsComponent } from './sensors/sensors.component';
 import { NavComponent } from './nav/nav.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { QouteComponent } from './qoute/qoute.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CalendarComponent } from './calendar/calendar.component';
     MapComponent,
     NavComponent,
     SensorsComponent,
-    CalendarComponent
+    CalendarComponent,
+    QouteComponent
   ],
   imports: [
     BrowserModule,
