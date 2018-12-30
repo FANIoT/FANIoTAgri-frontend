@@ -12,7 +12,7 @@ import { MapComponent } from './map/map.component';
 import { SensorsComponent } from './sensors/sensors.component';
 import { NavComponent } from './nav/nav.component';
 import { CalendarComponent } from './calendar/calendar.component';
-import { QouteComponent } from './qoute/qoute.component';
+import { QuoteComponent } from './quote/quote.component';
 import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
@@ -22,7 +22,7 @@ import { FooterComponent } from './footer/footer.component';
     NavComponent,
     SensorsComponent,
     CalendarComponent,
-    QouteComponent,
+    QuoteComponent,
     FooterComponent
   ],
   imports: [
