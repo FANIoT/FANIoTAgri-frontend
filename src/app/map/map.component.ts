@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 
 import { control, Map, icon, latLng, marker, polyline, polygon, tileLayer, Layer, layerGroup } from 'leaflet';
-import { GestureHandling } from 'leaflet-gesture-handling';
+import 'leaflet-gesture-handling';
+import 'leaflet-measure';
 
 @Component({
   selector: 'app-map',
@@ -106,7 +107,16 @@ export class MapComponent {
   // onMapReady is called with map component reference when it is ready.
   onMapReady(map: Map) {
     map.addControl(control.zoom({ position: 'bottomleft' }));
-    Map.addInitHook('addHandler', 'gestureHandling', GestureHandling);
+    // casts the control because of the leaflet awkward plugin model.
+    map.addControl((<any> control).measure(
+      {
+        position: 'bottomleft',
+        primaryLengthUnit: 'meters',
+        secondaryLengthUnit: 'kilometers',
+        primaryAreaUnit: 'sqmeters',
+        secondaryAreaUnit: 'hectares',
+      }
+    ));
   }
 
 }
