@@ -93,7 +93,7 @@ export class MapComponent {
   layersControlOptions = {
     position: 'bottomright',
     collapsed: false
-  }
+  };
 
   // onMapReady is called with map component reference when it is ready.
   onMapReady(map: Map) {
