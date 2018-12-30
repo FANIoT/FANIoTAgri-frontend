@@ -31,10 +31,13 @@ export class MapComponent {
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
   });
 
+  /*
+   * grapeIcon is a map drop pin with a grape icon on it that uses as a marker for vineyards
+   */
   private grapeIcon = icon({
     iconSize: [85, 85],
     iconUrl: 'assets/img/drop-pins/grape.png',
-  })
+  });
 
   layersControl = {
     baseLayers: {
