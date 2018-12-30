@@ -47,19 +47,19 @@ export class MapComponent {
       ]),
       'Central Office': marker([36.72371666666667, 57.19871388888888], {
         icon: icon({
-          iconSize: [25, 30],
+          iconSize: [48, 64],
           iconUrl: 'assets/img/drop-pins/office.png',
         })
       }),
       'Weather Station': marker([ 36.6388777778, 57.4046222222 ], {
         icon: icon({
-          iconSize: [25, 30],
+          iconSize: [85, 85],
           iconUrl: 'assets/img/drop-pins/weather.png',
         })
       }),
       'Communication Station': marker([ 36.646472, 57.413339 ], {
         icon: icon({
-          iconSize: [25, 30],
+          iconSize: [48, 64],
           iconUrl: 'assets/img/drop-pins/bts.png',
         })
       }),
@@ -71,6 +71,10 @@ export class MapComponent {
         marker([36.614769, 57.427833]).bindPopup('Wine Grape'), // Garden 37
         marker([36.616700, 57.418761]).bindPopup('Table Grape'), // Garden 41
         marker([36.615866, 57.420759]).bindPopup('Table Grape'), // Garden 42
+        marker([36.614969, 57.422803]).bindPopup('Wine Grape'), // Garden 43
+        marker([36.614080, 57.424713]).bindPopup('Wine Grape'), // Garden 44
+        marker([36.613192, 57.426670]).bindPopup('Wine Grape'), // Garden 45
+        marker([36.611316, 57.425410]).bindPopup('Table Grape'), // Garden 59
       ])
     }
   };
