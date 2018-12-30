@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { control, Map, icon, latLng, marker, polyline, polygon, tileLayer, Layer } from 'leaflet';
+import { control, Map, icon, latLng, marker, polyline, polygon, tileLayer, Layer, layerGroup } from 'leaflet';
 import { GestureHandling } from 'leaflet-gesture-handling';
 
 @Component({
@@ -63,15 +63,10 @@ export class MapComponent {
           iconUrl: 'assets/img/drop-pins/bts.png',
         })
       }),
-      'Beetroot Graden': polygon([
-        [ 36.63538055555556, 57.4008 ],
-        [ 36.6336, 57.405249999999995 ],
-        [ 36.63013611111111, 57.40141111111111 ],
-        [ 36.63344444444444, 57.39310833333333 ],
-        [ 36.637727777777776, 57.38606388888889 ],
-        [ 36.63124722222222, 57.37755555555555 ],
-        [ 36.640477777777775, 57.3966 ]
-      ], {color: 'red'}),
+      'Vineyard': layerGroup([
+        marker([36.618333, 57.419968]), // Garden 33
+        marker([36.617412, 57.421914]), // Garden 34
+      ])
     }
   };
 
