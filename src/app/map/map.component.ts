@@ -68,6 +68,7 @@ export class MapComponent {
         marker([36.617412, 57.421914]).bindPopup('Wine Grape'), // Garden 34
         marker([36.616586, 57.423869]).bindPopup('Wine Grape'), // Garden 35
         marker([36.615667, 57.425852]).bindPopup('Wine Grape'), // Garden 36
+        marker([36.614769, 57.427833]).bindPopup('Wine Grape'), // Garden 37
       ])
     }
   };
