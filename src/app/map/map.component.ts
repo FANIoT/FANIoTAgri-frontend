@@ -107,7 +107,7 @@ export class MapComponent {
   // onMapReady is called with map component reference when it is ready.
   onMapReady(map: Map) {
     map.addControl(control.zoom({ position: 'bottomleft' }));
-    // casts the control because of the leaflet awkward plugin model.
+    // casts the control to any because of the leaflet awkward plugin model.
     map.addControl((<any> control).measure(
       {
         position: 'bottomleft',
