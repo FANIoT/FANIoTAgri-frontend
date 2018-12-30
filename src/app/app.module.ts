@@ -13,6 +13,7 @@ import { SensorsComponent } from './sensors/sensors.component';
 import { NavComponent } from './nav/nav.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { QouteComponent } from './qoute/qoute.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { QouteComponent } from './qoute/qoute.component';
     NavComponent,
     SensorsComponent,
     CalendarComponent,
-    QouteComponent
+    QouteComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
