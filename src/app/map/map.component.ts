@@ -64,8 +64,10 @@ export class MapComponent {
         })
       }),
       'Vineyard': layerGroup([
-        marker([36.618333, 57.419968]), // Garden 33
-        marker([36.617412, 57.421914]), // Garden 34
+        marker([36.618333, 57.419968]).bindPopup('Wine Grape'), // Garden 33
+        marker([36.617412, 57.421914]).bindPopup('Wine Grape'), // Garden 34
+        marker([36.616586, 57.423869]).bindPopup('Wine Grape'), // Garden 35
+        marker([36.615667, 57.425852]).bindPopup('Wine Grape'), // Garden 36
       ])
     }
   };
