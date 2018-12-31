@@ -59,7 +59,7 @@ export class MapRsComponent {
 
   // onMapReady is called with map component reference when it is ready.
   onMapReady(map: Map) {
-    interval(1000).subscribe(() => { map.invalidateSize() });
+    interval(1000).subscribe(() => { map.invalidateSize(); });
     map.addControl(control.zoom({ position: 'bottomleft' }));
     // casts the control to any because of the leaflet awkward plugin model.
     map.addControl((<any> control).measure(
