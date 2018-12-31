@@ -36,7 +36,7 @@ export class MapComponent {
    * grapeIcon is a map drop pin with a grape icon on it that uses as a marker for vineyards
    */
   private grapeIcon = icon({
-    iconSize: [85, 85],
+    iconSize: [50, 50],
     iconUrl: 'assets/img/drop-pins/grape.png',
   });
 
@@ -56,19 +56,19 @@ export class MapComponent {
       ]),
       'Central Office': marker([36.72371666666667, 57.19871388888888], {
         icon: icon({
-          iconSize: [48, 64],
+          iconSize: [50, 50],
           iconUrl: 'assets/img/drop-pins/office.png',
         })
       }),
       'Weather Station': marker([ 36.6388777778, 57.4046222222 ], {
         icon: icon({
-          iconSize: [85, 85],
+          iconSize: [50, 50],
           iconUrl: 'assets/img/drop-pins/weather.png',
         })
       }),
       'Communication Station': marker([ 36.646472, 57.413339 ], {
         icon: icon({
-          iconSize: [48, 64],
+          iconSize: [50, 50],
           iconUrl: 'assets/img/drop-pins/bts.png',
         })
       }),
