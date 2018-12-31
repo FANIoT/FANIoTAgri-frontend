@@ -32,14 +32,6 @@ export class MapRsComponent {
     subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
   });
 
-  /*
-   * grapeIcon is a map drop pin with a grape icon on it that uses as a marker for vineyards
-   */
-  private grapeIcon = icon({
-    iconSize: [50, 50],
-    iconUrl: 'assets/img/drop-pins/grape.png',
-  });
-
   layersControl = {
     baseLayers: {
       'Satellite-Street': this.satelliteStreet,
