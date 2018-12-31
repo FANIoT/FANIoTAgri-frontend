@@ -15,6 +15,7 @@ import { NavComponent } from './nav/nav.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FooterComponent } from './footer/footer.component';
+import { MapRsComponent } from './map-rs/map-rs.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     SensorsComponent,
     CalendarComponent,
     QuoteComponent,
-    FooterComponent
+    FooterComponent,
+    MapRsComponent
   ],
   imports: [
     BrowserModule,
