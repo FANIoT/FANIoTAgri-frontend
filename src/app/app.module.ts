@@ -6,6 +6,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
@@ -31,6 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     NgbModule,
     ScrollToModule.forRoot(),
     BrowserAnimationsModule,
+    MatTabsModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory
