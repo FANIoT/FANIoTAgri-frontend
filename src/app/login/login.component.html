@@ -1,0 +1,70 @@
+<!-- begin login -->
+<div class="login login-with-news-feed">
+  <!-- begin news-feed -->
+  <div class="news-feed">
+    <div class="news-image">
+      <img src="assets/img/bg/login-bg.png">
+    </div>
+    <div class="news-caption">
+      <h4 class="caption-title"><b>Agriculture</b> needs <b>Redesign</b></h4>
+      <p>
+      </p>
+    </div>
+  </div>
+  <!-- end news-feed -->
+  <!-- begin right-content -->
+  <div class="right-content">
+    <!-- begin login-header -->
+    <div class="login-header">
+      <div class="brand">
+        <img src="assets/img/logo/logo-1.png" class="logo" />
+        <b>FANIoT</b> Agriculture
+        <small>Welcome to your smart farm</small>
+      </div>
+      <div class="icon">
+        <i class="fa fa-sign-in-alt"></i>
+      </div>
+    </div>
+    <!-- end login-header -->
+    <!-- begin login-content -->
+    <div class="login-content">
+      <form #f="ngForm" (ngSubmit)="formSubmit(f)" class="margin-bottom-0">
+        <div class="form-group m-b-15">
+          <input name="username" #username="ngModel" ngModel type="text" [class.is-invalid]="isValid(username)" class="form-control form-control-lg" placeholder="Username" required pattern="[A-Za-z0-9]+"/>
+          <div *ngIf="username.hasError('required')" class="invalid-feedback">
+            Username is required.
+          </div>
+          <div *ngIf="username.errors?.pattern" class="invalid-feedback">
+            Username must contains only alphanumeric characters.
+          </div>
+        </div>
+        <div class="form-group m-b-15">
+          <input name="password" #password="ngModel" ngModel type="password" [class.is-invalid]="isValid(password)" class="form-control form-control-lg" placeholder="Password" required />
+          <div *ngIf="password.hasError('required')" class="invalid-feedback">
+            Password is required.
+          </div>
+        </div>
+        <!-- 
+        <div class="checkbox checkbox-css m-b-30">
+          <input name="remember" ngModel type="checkbox" id="remember_me_checkbox" />
+          <label for="remember_me_checkbox">
+            Remember Me
+          </label>
+        </div>
+        -->
+        <div class="login-buttons">
+          <button type="submit" class="btn btn-success btn-block btn-lg" [disabled]="loading || f.invalid" [innerHTML]="submitButtonText"></button>
+        </div>
+        <div class="m-t-20 m-b-40 p-b-40 text-inverse">
+        </div>
+        <hr />
+        <p class="text-center text-grey-darker">
+          &copy; Avid Net Technology All Right Reserved 2018
+        </p>
+      </form>
+    </div>
+    <!-- end login-content -->
+  </div>
+  <!-- end right-container -->
+</div>
+<!-- end login -->
