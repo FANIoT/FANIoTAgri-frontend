@@ -1,6 +1,9 @@
 <app-nav></app-nav>
-<app-map id="map"></app-map>
-<hr>
+<mat-tab-group class="maps-tabs" id="map">
+  <mat-tab label="Map">
+    <app-map></app-map>
+  </mat-tab>
+</mat-tab-group>
 <app-sensors id="sensors"></app-sensors>
 <app-quote></app-quote>
 <app-calendar id="calendar"></app-calendar>
