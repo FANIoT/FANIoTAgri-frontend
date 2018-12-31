@@ -4,4 +4,4 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
 @import "~angular-calendar/css/angular-calendar.css";
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
