@@ -1,15 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { control, Map, icon, latLng, tileLayer } from 'leaflet';
 import { interval } from 'rxjs';
 import 'leaflet-gesture-handling';
 import 'leaflet-measure';
+import GeoRasterLayer from 'georaster-layer-for-leaflet';
+import geoblaze from 'geoblaze';
 
 @Component({
   selector: 'app-map-rs',
   templateUrl: './map-rs.component.html',
   styleUrls: ['./map-rs.component.css']
 })
-export class MapRsComponent {
+export class MapRsComponent implements OnInit {
 
   // Define our base layers so we can reference them multiple times
   streetMaps = tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -39,6 +41,8 @@ export class MapRsComponent {
       'Wikimedia Maps': this.wMaps,
       'Satellite Maps': this.satMaps
     },
+    overlays: {
+    }
   };
 
   // Set the initial set of displayed layers (we could also use the leafletLayers input binding for this)
@@ -56,6 +60,18 @@ export class MapRsComponent {
     position: 'bottomright',
     collapsed: false
   };
+
+  async loadIla() {
+    const data = await geoblaze.load('assets/rs/abs1.tif');
+    this.layersControl.overlays['ila'] = new GeoRasterLayer({
+      georaster: data,
+      opacity: 0.7,
+    });
+  }
+
+  ngOnInit() {
+    this.loadIla();
+  }
 
   // onMapReady is called with map component reference when it is ready.
   onMapReady(map: Map) {
