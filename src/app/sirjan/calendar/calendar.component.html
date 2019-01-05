@@ -1,0 +1,43 @@
+<div class="container content">
+  <h2 class="content-title">Calendar</h2>
+  <p class="content-desc">
+    Manage the times of irrigation and etc.
+  </p>
+  <div class="row text-center">
+    <div class="col-md-4">
+      <div class="btn-group btn-group-sm" role="group">
+        <div
+          class="btn btn-primary"
+          mwlCalendarPreviousView
+          [view]="view"
+          [(viewDate)]="viewDate">
+          Previous
+        </div>
+        <div
+          class="btn btn-outline-secondary"
+          mwlCalendarToday
+          [(viewDate)]="viewDate">
+          Today
+        </div>
+        <div
+          class="btn btn-primary"
+          mwlCalendarNextView
+          [view]="view"
+          [(viewDate)]="viewDate">
+          Next
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <h3>{{ viewDate | calendarDate:(view + 'ViewTitle'):'en' }}</h3>
+    </div>
+    <div class="col-md-4">
+    </div>
+  </div>
+  <mwl-calendar-month-view
+    [viewDate]="viewDate"
+    [weekendDays]="[4, 5]"
+    [weekStartsOn]="6"
+    >
+  </mwl-calendar-month-view>
+</div>
