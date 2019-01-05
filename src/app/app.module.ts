@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 
 import { MainModule } from './main/main.module';
+import { MainModule as SirjanModule } from './sirjan/main.module';
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
@@ -20,6 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule,
     MainModule,
+    SirjanModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
