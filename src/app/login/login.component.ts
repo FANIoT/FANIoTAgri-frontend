@@ -51,6 +51,10 @@ export class LoginComponent {
    * formSubmits calls when user submits the login form.
    */
   public formSubmit(f: FormGroup): void {
-    this.router.navigate(['main']);
+    if (f.value.username === 'joveyn') {
+      this.router.navigate(['main']);
+    } else if (f.value.username === 'sirjan') {
+      this.router.navigate(['sirjan']);
+    }
   }
 }
