@@ -48,8 +48,8 @@ export class MapRsComponent implements OnInit {
   // Set the initial set of displayed layers (we could also use the leafletLayers input binding for this)
   options = {
     layers: [ this.satelliteStreet ],
-    zoom: 12.25,
-    center: latLng([ 36.6582695, 57.3080566 ]), // center of the Joveyn provice
+    zoom: 16.4,
+    center: latLng([ 29.306181, 55.813189 ]), // center of the Sirjan provice
     zoomControl: false,
     attributionControl: false,
     gestureHandling: true,
@@ -61,16 +61,23 @@ export class MapRsComponent implements OnInit {
     collapsed: false
   };
 
-  async loadIla() {
-    const data = await geoblaze.load('assets/rs/abs1.tif');
-    this.layersControl.overlays['ila'] = new GeoRasterLayer({
+  async loadSavi() {
+    const data = await geoblaze.load('assets/rs/savi.tif');
+    this.layersControl.overlays['savi'] = new GeoRasterLayer({
       georaster: data,
       opacity: 0.7,
+      pixelValueToColorFn: (value) => {
+        if (value > 0) {
+          return "black";
+        } else {
+          return "white";
+        }
+      }
     });
   }
 
   ngOnInit() {
-    this.loadIla();
+    this.loadSavi();
   }
 
   // onMapReady is called with map component reference when it is ready.
